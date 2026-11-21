@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebArchive — Главная</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 28px 24px 44px;
+            font-family: "Times New Roman", Times, Georgia, serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .page {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        /* Заголовок WebArchive */
+        .title {
+            text-align: center;
+            font-size: 46px;
+            font-weight: normal;
+            margin: 0 0 24px;
+            letter-spacing: 0.3px;
+        }
+
+        .web-green {
+            color: #00b000;
+        }
+
+        .archive-black {
+            color: #000000;
+        }
+
+        /* Две карточки рядом */
+        .cards-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .card {
+            flex: 1;
+            border: 2px solid #000000;
+            border-radius: 68px;
+            padding: 28px 32px;
+            text-align: center;
+            font-size: 23px;
+            line-height: 1.28;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .tg-link {
+            color: #000000;
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        .tg-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Нижний блок со ссылкой и глянцевой кнопкой */
+        .link-row {
+            margin-top: 28px;
+            padding-left: 14px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .glossy-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 112px;
+            height: 92px;
+            border-radius: 18px;
+            border: 1.5px solid #1e7e1e;
+            background: linear-gradient(180deg, #27b827 0%, #0a8a0a 52%, #007000 85%, #19a319 100%);
+            box-shadow:
+                inset 0 2px 3px rgba(255, 255, 255, 0.65),
+                inset 0 -3px 5px rgba(0, 40, 0, 0.55),
+                0 3px 6px rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            font-size: 22px;
+            text-decoration: none;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        /* Верхний глянцевый блик как в PowerPoint */
+        .glossy-btn::before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 6px;
+            right: 6px;
+            height: 36%;
+            border-radius: 12px 12px 24px 24px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.12));
+            pointer-events: none;
+        }
+
+        .glossy-btn:hover {
+            filter: brightness(1.06);
+        }
+
+        .glossy-btn:active {
+            transform: translateY(1px);
+        }
+
+        .site-url {
+            font-size: 23px;
+            color: #2b7de9;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .site-url:hover {
+            text-decoration: underline;
+        }
+
+        /* Адаптив для телефонов и планшетов */
+        @media (max-width: 860px) {
+            .cards-row {
+                flex-direction: column;
+            }
+
+            .card {
+                border-radius: 40px;
+                padding: 24px 20px;
+                font-size: 19px;
+            }
+
+            .title {
+                font-size: 38px;
+            }
+
+            .site-url {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1 class="title">
+            <span class="web-green">Web</span><span class="archive-black">Archive</span>
+        </h1>
+
+        <div class="cards-row">
+            <!-- Левая карточка -->
+            <div class="card">
+                <p>
+                    <span class="web-green">Web</span><span class="archive-black">Archive</span> - это быстрый и простой онлайн-файлообменник, созданный для удобного хранения, поиска и обмена файлами до 10 ГБ без лишней регистрации.
+                </p>
+                <p>
+                    Мы создаём <span class="web-green">Web</span><span class="archive-black">Archive</span> с нуля своими руками - от серверной части и системы хранения до адаптивного интерфейса.
+                </p>
+                <p>
+                    Проект постоянно развивается: мы тестируем новые функции, улучшаем скорость работы и собираем комьюнити вокруг удобного обмена файлами.
+                </p>
+                <p>
+                    Стиль сайта – это глянцевые кнопки и минимализм.
+                </p>
+            </div>
+
+            <!-- Правая карточка -->
+            <div class="card">
+                <p>
+                    Общее хранилище на 300 ГБ.
+                </p>
+                <p>
+                    Удобный поиск по ключевым словам и подробные описания к каждому файлу.
+                </p>
+                <p>
+                    Все загрузки проходят ручную проверку, чтобы в архиве оставались только рабочие материалы.
+                </p>
+                <p>
+                    График работы сайта: с 10:00 до 22:30.
+                </p>
+                <p>
+                    Следить за обновлениями, новостями разработки и актуальной ссылкой можно в нашем Telegram-канале:
+                    <a class="tg-link" href="https://t.me/webarchive_share" target="_blank">@webarchive_share</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Кнопка и ссылка -->
+        <div class="link-row">
+            <a class="glossy-btn" href="https://paced-unreal-paramedic.ngrok-free.dev/" target="_blank">Ссылка:</a>
+            <a class="site-url" href="https://paced-unreal-paramedic.ngrok-free.dev/" target="_blank">
+                https://paced-unreal-paramedic.ngrok-free.dev/
+            </a>
+        </div>
+    </div>
+</body>
+</html>
